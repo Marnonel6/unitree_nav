@@ -19,6 +19,9 @@ Use `ros2 launch unitree_nav ${launch_file_name} --show-args` to view arguments 
 - `mapping.launch.py` - launches RS LiDAR and RTAB-Map nodes to map with point cloud data from the RS-Helios-16P.
 - `rslidar_robosense.launch.py` - launches only RTAB-Map nodes set up in a configuration that is compatiable with the RS-Helios-16P.
 
+# To launch with guide dog custom NAV2 parameters
+`ros2 launch unitree_nav unitree_nav.launch.py use_guide_dog_params:=true`
+
 # Nodes
 ## cmd_processor
 This node handles commands and converts them into `HighCmd` messages which can be read by the high level UDP node in [this repository](https://github.com/katie-hughes/unitree_ros2) and then sent to the Go1 for motion control.
